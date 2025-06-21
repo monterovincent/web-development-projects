@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+var johnframe;
+function forwindow()
+
+{
+	
+johnframe = open("", "jimmy", "scrollbars=1,status=1, width=500");
+johnframe.document.write("<h1>WELCOME TO MUSCON AIRLINE BOOKING</h1><p> Executive class:$1000000</h4></p><p>Business class:500,000</p><p> Middle class:$300,000</p><p>Average class:$200,000</p><input type='button' id='window3' value='close window' onclick='closeit()'>")
+setTimeout("popoff()",20000);
+
+}
+
+
+
+function closeit()
+{
+alert("do u want to close window")
+johnframe.close();	
+}
+
+
+function craze()
+{
+
+setTimeout("forwindow()", 10000);
+}
+function popoff() 
+{
+johnframe.close();
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+
+
+
+
+
+
+<body onLoad="craze()">
+<center><h1>WELCOME TO MUSCON AIRLINE BOOKINGS</h1>
+<p>Executive class:$1000000</p>
+<p>Business class:500,000</p>
+<p>Middle class:$300,000</p>
+<p>Average class:$200,000</p>
+</center>
+
+
+
+
+<center><form>
+<input type="button" id="window1" value="new window"onClick="forwindow()">
+<input type="button" id="window2" value="open window">
+<input type="button" id="window3" value="close window" onclick="closeit()">
+<input type="button" id="Booking price" value="Booking price" onclick="Booking price()"
+</form>
+<centre/>
+
+
+
+
+</body>
+</body>
+</html>

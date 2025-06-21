@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+function osas(){
+	var value1,value2,u1,u2;
+	value1 =parseInt(document.getElementById("FitstValue").value);
+	u1=(document.getElementById("memory").value);
+	u2=(document.getElementById("mem").value)
+	if(u1 == "bit" && u2 == "byte"){
+		value2= value1*8
+	document.getElementById("answer").value=value2
+	}
+	else if(u1 == "bit" && u2 == "kb"){
+		value2= value1*8192
+	document.getElementById("answer").value=value2
+	}
+	else if(u1 == "bit" && u2 == "mb"){
+		value2= value1*8388608
+	document.getElementById("answer").value=value2
+	}
+	else if(u1 == "bit" && u2 == "gb"){
+		value2= value1*8*1024*1024*1024
+	document.getElementById("answer").value=value2
+	}
+	else if(u1 == "bit" && u2 == "tb"){
+		value2= value1*8*1024*1024*1024*1024
+	document.getElementById("answer").value=value2
+}
+	else if(u1 == "bit" && u2 == "bit"){
+		value2= value1
+	document.getElementById("answer").value=value2
+	 }
+	else if(u1 == "byte" && u2 == "bit"){
+		value2= value1/8
+	document.getElementById("answer").value=value2
+	}
+	else if(u1 == "byte" && u2 == "kb"){
+		value2= value1*1024
+	document.getElementById("answer").value=value2
+	}
+	else if(u1 == "byte" && u2 == "mb"){
+		value2= value1*1024*1024
+	document.getElementById("answer").value=value2
+	}
+	else if(u1 == "byte" && u2 == "gb"){
+		value2= value1*1024*1024*1024
+	document.getElementById("answer").value=value2
+	}
+	else if(u1 == "byte" && u2 == "tb"){
+		value2= value1*1024*1024*1024*1024
+	document.getElementById("answer").value=value2
+	}
+	
+	else if(u1 == "byte" && u2 == "byte"){
+		value2= value1
+	document.getElementById("answer").value=value2
+	}
+
+	else if(u1 == "kb" && u2 == "bit"){
+		value2= value1 / 8192
+	document.getElementById("answer").value=value2
+	}
+	else if(u1 == "kb" && u2 == "byte"){
+		value2= value1 / 1024
+	document.getElementById("answer").value=value2
+	}
+	else if(u1 == "kb" && u2 == "mb"){
+		value2= value1*1024
+	document.getElementById("answer").value=value2
+	}
+	else if(u1 == "kb" && u2 == "gb"){
+		value2= value1*1024*1024
+	document.getElementById("answer").value=value2
+	}
+	else if(u1 == "kb" && u2 == "tb"){
+		value2= value1*1024*1024*1024
+	document.getElementById("answer").value=value2
+	}
+	else if(u1 == "kb" && u2 == "kb"){
+		value2= value1
+	document.getElementById("answer").value=value2
+	}
+}
+</script>
+ 
+</head>
+
+<body>
+<form name="calculator" method="post">
+<b>FROM:</b><input id="FitstValue" type="text">
+<select id="memory">
+<option value="bit">bit</option>
+<option value="byte">byte</option>
+<option value="kb">kb</option>
+<option value="mb">mb</option>
+<option value="gb">gb</option>
+<option value="tb">tb</option>
+</select>
+<b>TO:</b><input id="answer" type="text">
+<select id="mem">
+<option value="bit">bit</option>
+<option value="byte">byte</option>
+<option value="kb">kb</option>
+<option value="mb">mb</option>
+<option value="gb">gb</option>
+<option value="tb">tb</option>
+<input id="equals" type="button" value="convert" onclick="osas()">
+</select>
+</form>
+</body>
+</html>

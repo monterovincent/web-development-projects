@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>calcworkout</title>
+
+<script>
+function myCal () {
+	     var number1, number2, result, operand;
+		  number1 = parseInt(document.getElementById("num1").value);
+		number2 = parseInt(document.getElementById("num2").value);
+		operand = document.getElementById("operator").value;
+
+if (operand == "+"){
+			result = number1 + number2;
+		}
+		else if (operand == "-"){
+			result = number1 - number2;
+		}
+		else if (operand == "*"){
+			result = number1 * number2;
+		}
+		else{
+			result = number1 / number2;
+		}
+		document.getElementById("is").value = result;
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+<form name="myform" method="post">
+	<input type="text" id="num1" />
+    <select id="operator">
+    	<option value="+">Plus</option>
+        <option value="-">Minus</option>
+        <option value="*">Multiply</option>
+        <option value="/">Divide</option>
+    </select>
+    <input type="text" id="num2" />
+    <input type="button" id="btn" value="=" onClick="myCal()" />
+    <input type="text" id="is" />
+</form>
+
+
+</body>
+</html>

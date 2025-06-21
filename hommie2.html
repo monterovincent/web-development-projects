@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+function rollover() {
+	document.images[0].src="home3.png" ;
+}
+function rollout() {
+document.images[0].src="home2.png" ;
+}
+function rollover2() {
+	document.images[0].src="contact2.png" ;
+}
+function rollout3() {
+	document.images[0].src="contact.png" ;
+}
+function rollover4() {
+	document.images[0].src="service2.png" ;
+}
+function rollout5() {
+	document.images[0].src="service.png" ;
+}
+
+</script>
+
+
+
+</head>
+
+<body>
+<center>
+<img src="home2.png" onMouseOver="rollover()" onMouseOut="rollout()"/>
+<img src="contact.png" onMouseOver="rollover2()" onMouseOut="rollover3()"/>
+<img src="services.png" onMouseOver="rollover4()" onMouseOut="rollover5()"/>
+</center>
+</body>
+</html>

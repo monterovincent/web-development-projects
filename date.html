@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+function check() {
+var x;
+var weekdays = new Array ( "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday");
+x= document.getElementById("num").value;
+if (x.length == ""){
+	document.getElementById("display").innerHTML="input cannot be blank or must be between 0 and 6";
+}
+else if ( x = 5) {
+	document.getElementById("result").innerHTML="thank God its friday" + weekdays(x);
+	}
+
+
+
+}
+
+
+
+
+
+</script>
+
+
+
+</head>
+
+
+<body>
+<form >
+NUMBER:<input id="num" type="text"  placeholder="input numbers between 0 and 6" size="40">
+<p id="display"></p>
+<button type="button"  onClick="check()"> Submit</button>
+<p id="result"></p>
+</form>
+
+
+
+
+</body>
+</html>

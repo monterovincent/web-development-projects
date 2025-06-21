@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+function cap() {
+var user = document.getElementById("username").value;
+var pass = document.getElementById("password").value;
+
+if(user.length == " " && pass.length == ""){
+	document.getElementById("display").innerHTML = "Username cannot be left blank";
+	document.getElementById("display2").innerHTML = "Password cannot be left blank ";
+	}
+else if(user.length == " "){
+	document.getElementById("display").innerHTML = "Username cannot be left blank";
+	document.getElementById("display2").innerHTML = " ";
+	}
+else if(pass.length <= 5 || pass.length == " "){
+	document.getElementById("display").innerHTML = "";
+	document.getElementById("display2").innerHTML = "Password cannot be left blank and must be more than 5 characters ";
+	}
+else{
+	document.getElementById("display").innerHTML = "";
+	document.getElementById("display2").innerHTML = "";
+	}
+}
+</script>
+
+
+
+
+</head>
+
+<body>
+<form>
+<center>
+username:<input type="text" name="username" id="username" /><p id="display"></p><p id="display2"></p>
+
+<br>password:<input type="password" name="password" id="password" /><br/><p id="display"></p><p id="display2"></p>
+<br><input type="button" id="btn" value="login" onClick="cap()"><br/>
+</center>
+</form>
+
+
+
+</body>
+</html>

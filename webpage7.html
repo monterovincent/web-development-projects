@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>web level</title>
+
+
+<script>
+	function checkage()
+{
+		var checkage=document.myform.age.value;
+		if(checkage> 18)	
+	{	  
+	    alert("you are not within the restricted age range")
+	}	
+}
+function passwordcheck()	
+{
+	var p1=document.myform1.pass1.value;
+	var p2=document.myform1.pass2.value;
+	if(p1.length ==	0|| p1.length<8)
+	{	
+		alert("password can not be blank or less than 8");
+	}
+	else
+	{
+		alert ("password correct"); 
+	
+	}
+}
+</script>
+</head>
+<body>
+
+<form name="myform">
+Age:<input type="number" name="age"/> <input type="submit" value="submit" onClick="checkage()"
+</form>
+<form name="myform1">
+	<table>
+    <tr>
+    <td> password:</td>	
+	<td><input type="password"  name="pass1"> </td>
+	</tr>
+    <tr>
+    <td>confirm password:</td>	
+	<td><input type="password"  name="pass2" onfocus="passwordcheck()"/> </td>
+	</tr>
+    <tr>
+    <td> </td>	
+	<td><input type="submit"  name="submit" value="submit" onClick="passwordcheck()"> </td>
+	</tr>
+    </table>
+</body>
+
+</html>
